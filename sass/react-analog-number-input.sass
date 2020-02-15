@@ -1,0 +1,133 @@
+$white: #ffffff
+$black: #0A0A0D
+$grey: #E1E1E1
+
+$container-height: 105px
+$container-width: 60px
+    
+.react-analog-number-input
+    width: $container-width
+    text-align: center
+
+    .input-nav
+        position: relative
+        display: flex
+        justify-content: center
+        cursor: pointer
+
+        svg
+            g
+                opacity: 1
+            
+            path
+                fill: $white
+
+        &.disabled
+            pointer-events: none
+
+            svg
+                g
+                    opacity: 0.75
+
+        &::before, &::after
+            position: absolute
+            left: 0
+            right: 0
+            content: ''
+            width: $container-width
+            height: $container-width / 2
+            background: linear-gradient(180deg, $black 40%, transparentize($black, 1) 100%)
+            z-index: 10
+
+        &::before
+            bottom: 100%
+            transform: rotate(180deg)
+
+            @media (max-width: 768px)
+                bottom: 75%
+
+        &::after
+            top: 100%
+
+            @media (max-width: 768px)
+                top: 75%
+
+        &.add
+            &::before
+                content: none
+
+        &.subtract
+            &::after
+                content: none
+
+    .input-container
+        height: $container-height
+        width: 100%
+        overflow: hidden
+
+        .swiper
+            height: 100%
+            width: 100%
+            display: flex
+            flex-direction: column
+            justify-content: flex-end
+            transition: all .35s ease-in-out
+
+            .value
+                height: $container-height / 3
+                line-height: 1
+                font-size: 20px
+                font-weight: 500
+                color: $white
+                text-align: center
+                border-bottom: 1px solid $white
+                padding: 10px 0 5px
+                display: flex
+                align-items: center
+                justify-content: center
+                vertical-align: middle
+
+    &.horizontal
+        height: $container-width
+        width: auto
+        display: flex
+
+        .input-nav
+            align-items: center
+
+            svg
+                transform: rotate(270deg)
+
+            &::before, &::after
+                position: absolute
+                top: 0
+                left: unset
+                right: unset
+                content: ''
+                width: $container-width / 2
+                height: 100%
+                background: linear-gradient(270deg, $black 40%, transparentize($black, 1) 100%)
+                z-index: 10
+
+            &::before
+                left: 100%
+                transform: rotate(180deg)
+
+            &::after
+                right: 100%
+
+        .input-container
+            width: $container-height
+            height: 100%
+
+            .swiper
+                flex-direction: row
+                align-items: flex-start
+                justify-content: flex-start
+
+                .value
+                    width: $container-height / 3
+                    flex: 0 0 $container-height / 3
+                    height: 100%
+                    border-bottom: 0
+                    border-right: 1px solid $white

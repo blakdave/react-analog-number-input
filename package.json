@@ -1,0 +1,48 @@
+{
+  "name": "react-analog-number-input",
+  "version": "1.0.0",
+  "description": "A react component that displays number inputs as analog. Side note: Looks like the lock combination used for baggages. Lol",
+  "main": "index.js",
+  "peerDependencies": {
+    "prop-types": "^15.7.2",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
+  },
+  "scripts": {
+    "start": "webpack --watch",
+    "build": "webpack",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "react",
+    "input",
+    "number",
+    "analog",
+    "safe",
+    "lock",
+    "baggage",
+    "lock",
+    "lock",
+    "combination",
+    "swiper"
+  ],
+  "author": "David (Blak Dave) Olubaji",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.8.4",
+    "@babel/preset-env": "^7.8.4",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.6",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "babel-preset-env": "^1.7.0",
+    "classnames": "^2.2.6",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "prop-types": "^15.7.2",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "webpack": "^4.41.6",
+    "webpack-cli": "^3.3.11"
+  }
+}
