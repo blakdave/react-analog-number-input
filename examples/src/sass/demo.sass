@@ -1,0 +1,74 @@
+$white      : #ffffff
+$black      : #16161A
+$black-2    : #0A0A0D
+$grey       : #E1E1E1
+    
+body
+    font-family: 'Montserrat', sans-serif
+    margin: 0
+    padding: 0
+    background: $black
+    color: $white
+
+.example
+    max-width: 1200px
+    margin: auto
+    padding: 50px
+
+    &-header
+        margin-bottom: 100px
+        text-align: center
+
+        span
+            display: block
+
+        .title
+            font-size: 42px
+            text-transform: uppercase
+
+        .description
+            font-size: 22px
+            line-height: 28px
+            margin: 20px 0
+
+        .side-note
+            font-size: 16px
+            font-style: italic
+            line-height: 22px
+
+    &-content
+        .input-type
+            margin-bottom: 50px
+
+            .title
+                display: block
+                font-size: 24px
+                text-transform: uppercase
+                margin-bottom: 15px
+
+            .description
+                display: flex
+
+            .input
+                width: 200px
+                flex: 0 0 200px
+
+            .summary
+                padding: 30px
+                margin-left: 30px
+                background: $grey
+                border-radius: 12px
+                color: $black
+
+                code
+                    display: block
+                    color: $black-2
+                    margin-bottom: 15px
+
+    .table
+        td
+            span
+                font-style: italic
+                font-size: 14px
+
+            

@@ -1,33 +1,40 @@
 $white: #ffffff
-$black: #0A0A0D
+$black: #16161A
 $grey: #E1E1E1
 
 $container-height: 105px
 $container-width: 60px
-    
+
+*
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+    -webkit-tap-highlight-color: transparent
+
+    &:before, &:after
+        box-sizing: border-box
+        -webkit-tap-highlight-color: transparent
+
 .react-analog-number-input
     width: $container-width
     text-align: center
+    background: $black
 
     .input-nav
         position: relative
         display: flex
         justify-content: center
         cursor: pointer
+        background: $black
 
-        svg
-            g
-                opacity: 1
-            
-            path
-                fill: $white
+        img
+            width: 50px
 
         &.disabled
             pointer-events: none
 
-            svg
-                g
-                    opacity: 0.75
+            img
+                opacity: 0.5
 
         &::before, &::after
             position: absolute
@@ -35,7 +42,7 @@ $container-width: 60px
             right: 0
             content: ''
             width: $container-width
-            height: $container-width / 2
+            height: 31px
             background: linear-gradient(180deg, $black 40%, transparentize($black, 1) 100%)
             z-index: 10
 
@@ -75,17 +82,16 @@ $container-width: 60px
 
             .value
                 height: $container-height / 3
+                padding: 10px 0 5px
                 line-height: 1
                 font-size: 20px
                 font-weight: 500
                 color: $white
                 text-align: center
                 border-bottom: 1px solid $white
-                padding: 10px 0 5px
                 display: flex
                 align-items: center
                 justify-content: center
-                vertical-align: middle
 
     &.horizontal
         height: $container-width
