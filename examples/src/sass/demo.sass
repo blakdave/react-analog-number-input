@@ -50,15 +50,20 @@ body
                 display: flex
 
             .input
-                width: 200px
-                flex: 0 0 200px
+                padding-right: 30px
+
+                @media (max-width: 768px)
+                    margin-bottom: 50px
 
             .summary
                 padding: 30px
-                margin-left: 30px
                 background: $grey
                 border-radius: 12px
                 color: $black
+
+                @media (max-width: 768px)
+                    font-size: 14px
+                    padding: 20px
 
                 code
                     display: block

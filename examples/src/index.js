@@ -35,12 +35,12 @@ class Demo extends Component {
           <div className="input-type">
             <span className="title">Vertical</span>
             <div className="description row">
-              <div className="input col-md-4">
+              <div className="input col-md-5">
                 <ReactAnalogNumberInput
                   onChange={val => this.onChange("vertical", val)}
                 />
               </div>
-              <div className="summary col-md-8">
+              <div className="summary col-md-7">
                 <code>
                   {`import ReactAnalogNumberInput from "react-analog-number-input";`}
                   <br />
@@ -69,13 +69,13 @@ class Demo extends Component {
           <div className="input-type">
             <span className="title">Horizontal</span>
             <div className="description row">
-              <div className="input col-md-4">
+              <div className="input col-md-5">
                 <ReactAnalogNumberInput
                   onChange={val => this.onChange("horizontal", val)}
                   horizontal
                 />
               </div>
-              <div className="summary col-md-8">
+              <div className="summary col-md-7">
                 <code>
                   {`import ReactAnalogNumberInput from "react-analog-number-input";`}
                   <br />

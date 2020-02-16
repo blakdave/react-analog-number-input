@@ -1,6 +1,6 @@
 {
   "name": "react-analog-number-input",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "A react component that displays number inputs as analog. Side note: Looks like the lock combination used for baggages. Lol",
   "main": "dist/index.js",
   "scripts": {

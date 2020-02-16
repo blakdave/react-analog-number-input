@@ -4,6 +4,7 @@ $grey: #E1E1E1
 
 $container-height: 105px
 $container-width: 60px
+$shadow-height: 40px
 
 *
     padding: 0
@@ -42,7 +43,7 @@ $container-width: 60px
             right: 0
             content: ''
             width: $container-width
-            height: 31px
+            height: $shadow-height
             background: linear-gradient(180deg, $black 40%, transparentize($black, 1) 100%)
             z-index: 10
 
@@ -51,13 +52,13 @@ $container-width: 60px
             transform: rotate(180deg)
 
             @media (max-width: 768px)
-                bottom: 75%
+                bottom: calc(100% - 5px)
 
         &::after
             top: 100%
 
             @media (max-width: 768px)
-                top: 75%
+                top: calc(100% - 5px)
 
         &.add
             &::before
@@ -110,7 +111,7 @@ $container-width: 60px
                 left: unset
                 right: unset
                 content: ''
-                width: $container-width / 2
+                width: $shadow-height
                 height: 100%
                 background: linear-gradient(270deg, $black 40%, transparentize($black, 1) 100%)
                 z-index: 10
@@ -119,8 +120,14 @@ $container-width: 60px
                 left: 100%
                 transform: rotate(180deg)
 
+                @media (max-width: 768px)
+                    left: calc(100% - 5px)
+
             &::after
                 right: 100%
+
+                @media (max-width: 768px)
+                    right: calc(100% - 5px)
 
         .input-container
             width: $container-height
