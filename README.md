@@ -2,6 +2,10 @@
 
 A react component that displays number inputs as analog.
 
+# Demo and Example
+
+Live Demo: [https://blakdave.github.io/react-analog-number-input/](https://blakdave.github.io/react-analog-number-input/)
+
 # Installation
 
 Use the package manager [npm](https://www.npmjs.com/) to install react-analog-number-input.

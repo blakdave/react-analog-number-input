@@ -2,9 +2,14 @@
   "name": "react-analog-number-input",
   "version": "1.0.0",
   "description": "A react component that displays number inputs as analog. Side note: Looks like the lock combination used for baggages. Lol",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "start": "webpack-dev-server --mode development",
+    "transpile": "babel src -d dist --copy-files",
+    "prepublishOnly": "npm run transpile",
+    "build": "webpack --mode production",
+    "deploy": "gh-pages -d examples/dist",
+    "publish-demo": "npm run build && npm run deploy",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -37,17 +42,18 @@
     "classnames": "^2.2.6"
   },
   "devDependencies": {
+    "@babel/cli": "^7.8.4",
     "@babel/core": "^7.8.4",
     "@babel/plugin-proposal-class-properties": "^7.8.3",
     "@babel/preset-env": "^7.8.4",
     "@babel/preset-react": "^7.8.3",
-    "babel-cli": "^6.26.0",
-    "babel-core": "^6.26.3",
+    "babel-core": "^7.0.0-bridge.0",
     "babel-loader": "^8.0.6",
     "babel-preset-env": "^1.7.0",
     "classnames": "^2.2.6",
     "css-loader": "^3.4.2",
     "file-loader": "^5.0.2",
+    "gh-pages": "^2.2.0",
     "html-webpack-plugin": "^3.2.0",
     "node-sass": "^4.13.1",
     "prop-types": "^15.7.2",
