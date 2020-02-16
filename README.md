@@ -19,12 +19,8 @@ Import as follows:
 ```javascript
 import ReactAnalogNumberInput from 'react-analog-number-input'
 
-/// Import one of the 2 styles below, as appropriate.
 // CSS
 import 'react-analog-number-input/css/react-analog-number-input.css';
-
-// SASS
-import 'react-analog-number-input/sass/react-analog-number-input.sass';
 ```
 
 # Usage
