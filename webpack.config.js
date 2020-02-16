@@ -14,7 +14,6 @@ module.exports = {
   },
   module: {
     rules: [
-      { test: /\.(png|jpg)$/, use: "url-loader?limit=25000" },
       {
         test: /\.(js|jsx)$/,
         use: "babel-loader",

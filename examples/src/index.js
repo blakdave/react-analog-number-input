@@ -2,7 +2,8 @@ import React, { Component } from "react";
 import { render } from "react-dom";
 import ReactAnalogNumberInput from "../../src";
 
-import "./sass/demo.sass";
+import "../../sass/react-analog-number-input.sass";
+import "../../sass/demo.sass";
 
 class Demo extends Component {
   state = {

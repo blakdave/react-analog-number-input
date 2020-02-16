@@ -4,12 +4,9 @@ import classNames from "classnames";
 
 import Nav from "./Nav";
 
-import "./sass/react-analog-number-input.sass";
+import { Up, Down, Left, Right } from "./vectors";
 
-const CaretUp = require("./assets/up.png");
-const CaretDown = require("./assets/down.png");
-const CaretRight = require("./assets/right.png");
-const CaretLeft = require("./assets/left.png");
+import "./sass/react-analog-number-input.sass";
 
 class ReactAnalogNumberInput extends Component {
   constructor(props) {
@@ -116,10 +113,10 @@ ReactAnalogNumberInput.defaultProps = {
   value: 0,
   max: 20,
   horizontal: false,
-  addIcon: <img src={CaretUp.default} alt="" />,
-  subtractIcon: <img src={CaretDown.default} alt="" />,
-  horizontalAddIcon: <img src={CaretRight.default} alt="" />,
-  horizontalSubtractIcon: <img src={CaretLeft.default} alt="" />
+  addIcon: <Up />,
+  subtractIcon: <Down />,
+  horizontalAddIcon: <Right />,
+  horizontalSubtractIcon: <Left />
 };
 
 export default ReactAnalogNumberInput;
