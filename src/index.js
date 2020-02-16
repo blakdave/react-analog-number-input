@@ -6,8 +6,6 @@ import Nav from "./Nav";
 
 import { Up, Down, Left, Right } from "./vectors";
 
-import "./sass/react-analog-number-input.sass";
-
 class ReactAnalogNumberInput extends Component {
   constructor(props) {
     super(props);
