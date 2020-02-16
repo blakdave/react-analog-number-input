@@ -1,0 +1,212 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+*:before,
+*:after {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.react-analog-number-input {
+  width: 60px;
+  text-align: center;
+  background: #16161a;
+}
+.react-analog-number-input .input-nav {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  cursor: pointer;
+  background: #16161a;
+}
+.react-analog-number-input .input-nav img,
+.react-analog-number-input .input-nav svg {
+  width: 50px;
+  height: auto;
+}
+.react-analog-number-input .input-nav.disabled {
+  pointer-events: none;
+}
+.react-analog-number-input .input-nav.disabled img {
+  opacity: 0.5;
+}
+.react-analog-number-input .input-nav::before,
+.react-analog-number-input .input-nav::after {
+  position: absolute;
+  left: 0;
+  right: 0;
+  content: "";
+  width: 60px;
+  height: 40px;
+  background: -webkit-linear-gradient(
+    270deg,
+    #16161a 40%,
+    rgba(22, 22, 26, 0) 100%
+  );
+  background: linear-gradient(180deg, #16161a 40%, rgba(22, 22, 26, 0) 100%);
+  z-index: 10;
+}
+.react-analog-number-input .input-nav::before {
+  bottom: 100%;
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+@media (max-width: 768px) {
+  .react-analog-number-input .input-nav::before {
+    bottom: calc(100% - 5px);
+  }
+}
+.react-analog-number-input .input-nav::after {
+  top: 100%;
+}
+@media (max-width: 768px) {
+  .react-analog-number-input .input-nav::after {
+    top: calc(100% - 5px);
+  }
+}
+.react-analog-number-input .input-nav.add::before {
+  content: none;
+}
+.react-analog-number-input .input-nav.subtract::after {
+  content: none;
+}
+.react-analog-number-input .input-container {
+  height: 105px;
+  width: 100%;
+  overflow: hidden;
+}
+.react-analog-number-input .input-container .swiper {
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-transition: all 0.35s ease-in-out;
+  transition: all 0.35s ease-in-out;
+}
+.react-analog-number-input .input-container .swiper .value {
+  height: 105px/3;
+  padding: 10px 0 5px;
+  line-height: 1;
+  font-size: 20px;
+  font-weight: 500;
+  color: #ffffff;
+  text-align: center;
+  border-bottom: 1px solid #ffffff;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.react-analog-number-input.horizontal {
+  height: 60px;
+  width: auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.react-analog-number-input.horizontal .input-nav {
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.react-analog-number-input.horizontal .input-nav svg {
+  -webkit-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  transform: rotate(270deg);
+}
+.react-analog-number-input.horizontal .input-nav::before,
+.react-analog-number-input.horizontal .input-nav::after {
+  position: absolute;
+  top: 0;
+  left: unset;
+  right: unset;
+  content: "";
+  width: 40px;
+  height: 100%;
+  background: -webkit-linear-gradient(
+    180deg,
+    #16161a 40%,
+    rgba(22, 22, 26, 0) 100%
+  );
+  background: linear-gradient(270deg, #16161a 40%, rgba(22, 22, 26, 0) 100%);
+  z-index: 10;
+}
+.react-analog-number-input.horizontal .input-nav::before {
+  left: 100%;
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+@media (max-width: 768px) {
+  .react-analog-number-input.horizontal .input-nav::before {
+    left: calc(100% - 5px);
+  }
+}
+.react-analog-number-input.horizontal .input-nav::after {
+  right: 100%;
+}
+@media (max-width: 768px) {
+  .react-analog-number-input.horizontal .input-nav::after {
+    right: calc(100% - 5px);
+  }
+}
+.react-analog-number-input.horizontal .input-container {
+  width: 105px;
+  height: 100%;
+}
+.react-analog-number-input.horizontal .input-container .swiper {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+.react-analog-number-input.horizontal .input-container .swiper .value {
+  width: 105px/3;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 105px/3;
+  -ms-flex: 0 0 105px/3;
+  flex: 0 0 105px/3;
+  height: 100%;
+  border-bottom: 0;
+  border-right: 1px solid #ffffff;
+}
