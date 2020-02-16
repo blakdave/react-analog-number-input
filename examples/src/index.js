@@ -114,6 +114,12 @@ class Demo extends Component {
                   </tr>
                 </thead>
                 <tbody>
+                    <tr>
+                        <td>onChange</td>
+                        <td>This is the function that receives the component's value on your end<br /> <span>Required</span></td>
+                        <td>Function</td>
+                        <td></td>
+                    </tr>
                   <tr>
                     <td>
                       value

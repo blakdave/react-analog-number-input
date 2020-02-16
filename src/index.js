@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { number, string, bool, node } from "prop-types";
+import { func, number, string, bool, node } from "prop-types";
 import classNames from "classnames";
 
 import Nav from "./Nav";
@@ -101,6 +101,7 @@ class ReactAnalogNumberInput extends Component {
 }
 
 ReactAnalogNumberInput.propTypes = {
+  onChange: func.isRequired,
   value: number,
   max: number,
   className: string,
