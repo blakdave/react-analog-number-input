@@ -27,6 +27,7 @@
   justify-content: center;
   cursor: pointer;
   background: #16161a;
+  height: 15px;
 }
 .react-analog-number-input .input-nav img,
 .react-analog-number-input .input-nav svg {
@@ -97,15 +98,12 @@
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
   -webkit-transition: all 0.35s ease-in-out;
   transition: all 0.35s ease-in-out;
 }
 .react-analog-number-input .input-container .swiper .value {
   height: 105px/3;
+  min-height: 105px/3;
   padding: 10px 0 5px;
   line-height: 1;
   font-size: 20px;

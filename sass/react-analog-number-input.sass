@@ -27,6 +27,7 @@ $shadow-height: 40px
         justify-content: center
         cursor: pointer
         background: $black
+        height: 15px
 
         img, svg
             width: 50px
@@ -35,8 +36,8 @@ $shadow-height: 40px
         &.disabled
             pointer-events: none
 
-            img
-                opacity: 0.5
+            img, svg
+                opacity: 0.2
 
         &::before, &::after
             position: absolute
@@ -79,11 +80,11 @@ $shadow-height: 40px
             width: 100%
             display: flex
             flex-direction: column
-            justify-content: flex-end
             transition: all .35s ease-in-out
 
             .value
                 height: $container-height / 3
+                min-height: $container-height / 3
                 padding: 10px 0 5px
                 line-height: 1
                 font-size: 20px
@@ -102,6 +103,7 @@ $shadow-height: 40px
 
         .input-nav
             align-items: center
+            height: auto
 
             svg
                 transform: rotate(270deg)

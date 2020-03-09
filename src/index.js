@@ -52,8 +52,8 @@ class ReactAnalogNumberInput extends Component {
     let numbers = new Array(max + 1).fill(0).map(({}, index) => index);
     numbers = horizontal ? numbers : numbers.reverse();
     const translate = horizontal
-      ? `translate3d(calc(${33.3 - 33.3 * value}%), 0, 0)`
-      : `translate3d(0, calc(${-33.3 + 33.3 * value}%), 0)`;
+      ? `translate3d(${33.3 - 33.3 * value}%, 0, 0)`
+      : `translate3d(0, ${-33.3 * (numbers.length - 2 - value)}%, 0)`;
 
     return (
       <div
